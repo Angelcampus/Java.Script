@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercice 3</h1>
+        <script type="text/javascript">
+
+            var playerInput = prompt("Your choice ( rock, paper, scissors) ?");
+             function getPlayerChoice(playerInput){
+                playerInput=playerInput.toLowerCase();
+                if (playerInput == "rock" || playerInput == "paper" || playerInput == "scissors"){
+                return playerInput;
+                } else {
+                console.log("Erreur de saisie");
+                }
+            }      
+            function getComputerChoice(){
+            let choixordi= ["rock","paper","scissors"];
+            return choixordi[Math.floor(Math.random() * 2)] ;
+            }
+            console.log(getPlayerChoice(playerInput));
+            console.log(getComputerChoice());
+
+            function findWinner(playerchoice , computerchoice){
+            if (playerchoice == computerchoice){
+            return console.log("TIED")
+            }else {
+                if (playerchoice=="rock" && computerchoice=="scissors"|| playerchoice=="scissors" && computerchoice=="paper"|| playerchoice=="paper" && computerchoice=="rock"){
+                return console.log("WIN")
+            } else{
+                return console.log("LOOSE")}
+            }
+            }
+            function playgame(){
+                let uchoice = getPlayerChoice;
+                let computerChoice = getComputerChoice;
+              return findWinner(uchoice,computerChoice);
+            }
+            console.log(playgame());
+
+          
+        </script>
+</body>
+</html>
