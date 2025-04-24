@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercice 2</h1>
+
+    <script type="text/javascript">
+        const isTesting = false;
+        const semaine = "Dommage c'est pas encore le Week-end";
+        const Weekend= "Youhouh c'est le Week-end";
+        
+        if (isTesting==true){
+            let myDate = new Date();// creer la fonction date
+             let jour= myDate.getDay(); // permet d'obtenir le jour 
+             let heure= myDate.getHours(); // permet d'obtenir l'heure  
+            //console.log(jour) jour de la semaine en chiffre 0-6 du dimanche au samedi 
+            //console.log(heure) l'heure sous forme entier 
+                if (jour==0 || jour==6 || jour==5 && heure>=17 || jour==1 && heure<=9) {
+                 console.log(Weekend);
+                 }  else {
+                console.log(semaine);                  
+                }
+            }
+        else {
+            const jourchoix = prompt('date et heure')
+            const myDate = Date(jourchoix);// creer la fonction date
+            const jour= myDate.getDay();
+            const heure= myDate.getHours();
+            if (myDate==0 || jour==6 || jour==5 && heure>=17 || jour==1 && heure<=9) {
+                 console.log(Weekend);
+                 }  else {
+                console.log(semaine);                  
+                }
+        }
+        
+    
+        
+    </script>
+    
+</body>
+</html>
