@@ -14,9 +14,9 @@
         const Weekend= "Youhouh c'est le Week-end";
         
         if (isTesting==true){
-            let myDate = new Date();// creer la fonction date
-             let jour= myDate.getDay(); // permet d'obtenir le jour 
-             let heure= myDate.getHours(); // permet d'obtenir l'heure  
+            const myDate = new Date();// creer la fonction date
+             const jour= myDate.getDay(); // permet d'obtenir le jour 
+             const heure= myDate.getHours(); // permet d'obtenir l'heure  
             //console.log(jour) jour de la semaine en chiffre 0-6 du dimanche au samedi 
             //console.log(heure) l'heure sous forme entier 
                 if (jour==0 || jour==6 || jour==5 && heure>=17 || jour==1 && heure<=9) {
@@ -26,11 +26,11 @@
                 }
             }
         else {
-            const jourchoix = prompt('date et heure')
-            const myDate = Date(jourchoix);// creer la fonction date
+            const jourchoix = prompt('date et heure format types = 2025-04-26T10:30')
+            const myDate = new Date(jourchoix);
             const jour= myDate.getDay();
             const heure= myDate.getHours();
-            if (myDate==0 || jour==6 || jour==5 && heure>=17 || jour==1 && heure<=9) {
+            if (jour==0 || jour==6 || jour==5 && heure>=17 || jour==1 && heure<=9) {
                  console.log(Weekend);
                  }  else {
                 console.log(semaine);                  
