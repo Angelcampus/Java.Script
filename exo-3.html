@@ -27,14 +27,15 @@
 
             function findWinner(playerchoice , computerchoice){
             if (playerchoice == computerchoice){
-            return console.log("TIED")
+            return "TIED";
             }else {
                 if (playerchoice=="rock" && computerchoice=="scissors"|| playerchoice=="scissors" && computerchoice=="paper"|| playerchoice=="paper" && computerchoice=="rock"){
-                return console.log("WIN")
+                return "WIN";
             } else{
-                return console.log("LOOSE")}
+                return "LOOSE";
+                }
             }
-            }
+        }
             function playgame(){
                 let uchoice = getPlayerChoice;
                 let computerChoice = getComputerChoice;

@@ -40,11 +40,23 @@ addPlayer(firstName,lastName,age) {
             teamPoints: teamPoints,
             opponentPoints:opponentPoints
         }
-        this.opp
+        this.games.push(newgames)
         },
-
-    }
-
-  
-Team.addPlayer("co","caaa",37);
-console.log(Team.players);
+        }
+      
+Team.addPlayer("johnny","cata",37);
+Team.addPlayer("luc","sens",57);
+Team.addPlayer("tori","mam",48);
+Team.addGames("brande",10,53);
+Team.addGames("marla",43,28);
+Team.addGames("nouel",72,42);
+//console.log(Team.players);
+//console.log(Team.games);
+function sommepoints(){
+    let accpoints=0;
+for (i=0;i<Team.games.length;i++){
+    accpoints=accpoints+Team.games[1][i];
+    console.log(accpoints)
+}
+}
+sommepoints();
